@@ -1,6 +1,7 @@
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "nikubuntu-1-5d7d63a5b8ca.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "jokes-bjvf-a02a3aac3652.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "jokes-bjvf-a02a3aac3652.json"
 
 import dialogflow_v2 as dialogflow
 
