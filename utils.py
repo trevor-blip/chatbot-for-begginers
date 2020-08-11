@@ -6,7 +6,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "jokes-bjvf-a02a3aac3652.json"
 import dialogflow_v2 as dialogflow
 
 dialogflow_session_client = dialogflow.SessionsClient()
-PROJECT_ID = "nikubuntu-1"
+PROJECT_ID = "jokes-bjvf"
 
 
 def detect_intent_from_text(text, session_id, language_code='en'):
