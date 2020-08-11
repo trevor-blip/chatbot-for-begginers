@@ -1,7 +1,6 @@
 import os
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "jokes-bjvf-a02a3aac3652.json"
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "jokes-bjvf-a02a3aac3652.json"
 
 import dialogflow_v2 as dialogflow
 
