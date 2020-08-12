@@ -1,7 +1,7 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 from corona import get_data
-from utils import fetch_reply
+
 
 app = Flask(__name__)
 
