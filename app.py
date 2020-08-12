@@ -16,18 +16,18 @@ def sms_reply():
     # Fetch the message
     msg_text = request.form.get('Body')
     phone_no = request.form.get('From')
-    if bool(msg_text)==False:
+    if(bool(phone_no)==False):
         msg = MessagingResponse()
         resp = msg.message("Hello this is a bot which gives you covid-19 statistics just enter a country name and it "
                            "will provide with current statistics ")
-        return str(msg)
-    else:
-        # Create reply
-        data = get_data(msg_text)
-        msg = MessagingResponse()
-        resp = msg.message(data)
+        return str(resp)
 
-        return str(msg)
+    # Create reply
+    data = get_data(msg_text)
+    msg = MessagingResponse()
+    resp = msg.message(data)
+
+    return str(msg)
 
 
 if __name__ == "__main__":
