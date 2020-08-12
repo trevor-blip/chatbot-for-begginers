@@ -27,7 +27,7 @@ def sms_reply():
         msg = MessagingResponse()
         resp = msg.message(data)
 
-        return str(resp)
+        return str(msg)
 
 
 if __name__ == "__main__":
