@@ -3,7 +3,6 @@ import json
 import requests
 
 
-
 def get_data(msg_text):
     url = "https://covid-193.p.rapidapi.com/statistics"
 
@@ -25,13 +24,11 @@ def get_data(msg_text):
             total = data['response'][i]['cases']['total']
             total_deaths = data['response'][i]['deaths']['total']
             new_deaths = data['response'][i]['deaths']['new']
-            data_complete = """"total_infected: """ + str(total) + """"
-                              active_cases: """ + str(active) + """"
-                              recovered: """ + str(recovered) + """"
-                              critical_cases: """ + str(critical) + """"
-                              new_cases: """ + str(new_cases) + """"
-                              total_deaths: """ + str(total_deaths) + """"
-                              new_deaths: """ + str(new_deaths)
+            data_complete = "Total Infected: " + str(total) + "\n" + "Active Cases: " + str(
+                active) + "\n" + "Total Recovered: " + str(recovered) + "\n" + "Critical Cases" + str(
+                critical) + "New Cases: " + str(new_cases) + "\n" + "Total Deaths: " + str(
+                total_deaths) + "\n" + "New Deaths: " + str(new_deaths)
+
             return data_complete
             break
     return "Country entered not found"
