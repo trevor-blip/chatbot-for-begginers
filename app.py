@@ -16,7 +16,7 @@ def sms_reply():
     # Fetch the message
     msg_text = request.form.get('Body')
     phone_no = request.form.get('From')
-    if(bool(phone_no)==False):
+    if bool(msg_text)==False:
         msg = MessagingResponse()
         resp = msg.message("Hello this is a bot which gives you covid-19 statistics just enter a country name and it "
                            "will provide with current statistics ")
