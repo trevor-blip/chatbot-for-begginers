@@ -1,7 +1,7 @@
 import json
 
 import requests
-import _json
+
 
 
 def get_data(msg_text):
