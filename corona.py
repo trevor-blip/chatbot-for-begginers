@@ -29,7 +29,7 @@ def get_data(msg_text):
                 total) + "\n" + "Active Cases: " + str(
                 active) + "\n" + "Total Recovered: " + str(recovered) + "\n" + "Critical Cases: " + str(
                 critical) + "\n" + "New Cases: " + str(new_cases) + "\n" + "Total Deaths: " + str(
-                total_deaths) + "\n" + "New Deaths: " + str(new_deaths)
+                total_deaths) + "\n" + "New Deaths: " + str(new_deaths)+ "\n\n\n\n\n*****Done By Trevor Gandanhamo*******"
 
             return data_complete
             break
