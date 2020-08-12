@@ -1,6 +1,6 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
-
+from corona import get_data
 from utils import fetch_reply
 
 app = Flask(__name__)
@@ -15,13 +15,14 @@ def hello():
 def sms_reply():
     """Respond to incoming calls with a simple text message."""
     # Fetch the message
-    msg = request.form.get('Body')
+    msg_text = request.form.get('Body')
     phone_no = request.form.get('From')
-    reply = fetch_reply(msg, phone_no)
+
 
     # Create reply
-    resp = MessagingResponse()
-    resp.message(reply)
+    data = get_data(msg_text)
+    msg = MessagingResponse()
+    resp=msg.message(data)
 
     return str(resp)
 
