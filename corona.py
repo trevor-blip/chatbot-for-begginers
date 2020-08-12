@@ -18,11 +18,11 @@ def get_data(msg_text):
     for i in range(len(data['response'])):
         x = data['response'][i]['country']
         if x.lower() == msg_text.lower():
-            active = data['response'][i]['active']
-            recovered = data['response'][i]['recovered']
-            new_cases = data['response'][i]['new']
-            critical = data['response'][i]['critical']
-            total = data['response'][i]['total']
+            active = data['response'][i]['cases']['active']
+            recovered = data['response'][i]['cases']['recovered']
+            new_cases = data['response'][i]['cases']['new']
+            critical = data['response'][i]['cases']['critical']
+            total = data['response'][i]['cases']['total']
             total_deaths = data['response'][i]['deaths']['total']
             new_deaths = data['response'][i]['deaths']['new']
             data_complete = """"total_infected: """ + str(total) + """"
