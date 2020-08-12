@@ -1,7 +1,6 @@
 import json
 import requests
 
-BOLD = '\033[1m'
 
 
 def get_data(msg_text):

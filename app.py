@@ -21,13 +21,13 @@ def sms_reply():
         resp = msg.message("Hello this is a bot which gives you covid-19 statistics just enter a country name and it "
                            "will provide with current statistics ")
         return str(resp)
+    else:
+        # Create reply
+        data = get_data(msg_text)
+        msg = MessagingResponse()
+        resp = msg.message(data)
 
-    # Create reply
-    data = get_data(msg_text)
-    msg = MessagingResponse()
-    resp = msg.message(data)
-
-    return str(msg)
+        return str(resp)
 
 
 if __name__ == "__main__":
