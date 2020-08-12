@@ -24,10 +24,10 @@ def get_data(msg_text):
             total = data['response'][i]['cases']['total']
             total_deaths = data['response'][i]['deaths']['total']
             new_deaths = data['response'][i]['deaths']['new']
-            data_complete = "Total Infected: " + str(total) + "\n" + "Active Cases: " + str(
+            data_complete = x + "\n" + "Total Infected: " + str(total) + "\n" + "Active Cases: " + str(
                 active) + "\n" + "Total Recovered: " + str(recovered) + "\n" + "Critical Cases" + str(
-                critical) + "New Cases: " + str(new_cases) + "\n" + "Total Deaths: " + str(
-                total_deaths) + "\n" + "New Deaths: " + str(new_deaths)
+                critical) + "\n" + "New Cases: " + str(total) + "\n" + "Total Deaths: " + str(
+                total_deaths) + "\n" + "New Deaths: " + str(total)
 
             return data_complete
             break
