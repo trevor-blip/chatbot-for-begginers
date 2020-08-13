@@ -26,7 +26,6 @@ def sms_reply():
         data = get_data(msg_text)
         msg = MessagingResponse()
         resp = msg.message(data)
-
         return str(msg)
 
 
